@@ -3,26 +3,26 @@ import { useRef } from 'react'
 const MAIN_PROJECTS = [
   {
     title: 'Security Technology Implementation for a Multi-Tenant Building',
-    summary: 'Rolled out a new security infrastructure across a large multi-tenant building with 1,500 users and 250 tenant organizations. Technology, processes and people had to move together.',
-    context: 'A continuously operating, multi-stakeholder environment with growing security requirements. On-site coverage was limited, and getting tenants, on-site staff and external parties aligned was essential to making anything stick.',
-    role: 'I translated security measures into operational workflows, coordinated external parties, onboarded internal teams and managed tenant communication. I also cleaned up a database from previous migrations and aligned processes with the new access control infrastructure.',
-    result: 'Trust between tenants and management improved. Incidents stopped. The processes and responsibilities established during the project remained in place after handover.',
+    summary: 'Security technology, process design and stakeholder communication in a complex 24/7 multi-tenant environment following multiple burglaries.',
+    context: 'A building with 250 tenant organizations and 1,500 users operating 24/7, with aging infrastructure and growing security concerns following multiple burglaries. On-site staff were only present during office hours.',
+    role: 'Translated security measures into operational workflows, coordinated external parties, onboarded internal teams and managed tenant communication. Aligned processes with the access control infrastructure, including a database cleanup from previous migrations.',
+    result: 'Trust was restored among tenants. The combination of operational measures and law enforcement collaboration contributed to identifying the responsible individual. Incidents stopped for a significant period. Clearer processes and operational responsibilities remained after the project.',
     topics: ['Access Control', 'Physical Security', 'Process Design', 'Stakeholder Management', 'Crisis Management', 'Camera Surveillance'],
   },
   {
     title: 'Operational Stabilization and Team Rebuilding During Organizational Change',
-    summary: 'A coworking location needed to rebuild after a period of significant leadership changes and a difficult CRM transition. I rebuilt the team and made operations reliable again.',
-    context: 'Multiple consecutive leadership changes and a new CRM rollout had created uncertainty across the team. Turnover was high and day-to-day operations needed someone to take the wheel.',
-    role: 'As location manager, I recruited and onboarded around 12 people, redesigned CRM-based workflows, standardized processes across sales, facility management and helpdesk, and ran daily operations directly during understaffed periods.',
-    result: 'The team became stable and self-sufficient. Customer satisfaction improved significantly. The location could run reliably without me being in the middle of everything.',
+    summary: 'Rebuilding teams and restoring stability at a coworking location after frequent management changes, high turnover and failing software implementations.',
+    context: 'A multi-tenant coworking operation facing high employee turnover and declining service quality following frequent management changes and a poorly executed software rollout.',
+    role: 'As location manager, recruited and onboarded approximately 12 employees and interns, redesigned CRM-based workflows, standardized processes across sales, facility management and helpdesk, and managed daily operations directly during understaffed periods.',
+    result: 'The operational organization became stable and autonomous again. Customer feedback improved significantly and teams could manage the building independently within the new structures.',
     topics: ['Operational Management', 'Team Leadership', 'Recruitment & Onboarding', 'Workflow Automation', 'CRM Systems', 'Change Management'],
   },
   {
     title: 'Recovery and Redesign of an Autonomous Robotics R&D Project',
-    summary: 'Took over coordination of a robotics R&D project with four technical teams. Pushed for a fundamental redesign and renegotiated the commercial model to get it back on track.',
-    context: 'The project had accumulated delays and misaligned expectations across embedded systems, electronics, mechanics and UI/UX disciplines. Getting it moving again required both a clearer direction and a new way of working with the client.',
-    role: 'I took over as project coordinator, did market research and field visits, and made the case for a simpler architecture. I renegotiated from milestone-based payments to transparent on-site hourly engagement, which gave both sides more clarity and room to work.',
-    result: 'The project found solid ground. The client relationship recovered. The new collaboration structure became financially important for the organization.',
+    summary: 'Project recovery, system redesign and commercial renegotiation in a technically complex robotics R&D environment with deteriorating client trust.',
+    context: 'An autonomous robotics R&D project with growing delays, unclear expectations and deteriorating trust between client and four technical teams across embedded systems, electronics, mechanics and UI/UX.',
+    role: 'Took over as project coordinator, initiated market research and field visits, and pushed for a fundamental redesign. Renegotiated the commercial model from milestone-based payments to transparent on-site hourly engagement — improving trust and financial stability.',
+    result: 'The project was repositioned with a simpler, more reliable architecture. The client relationship recovered, and the new collaboration structure became financially important for the organization.',
     topics: ['R&D Management', 'Robotics', 'Stakeholder Management', 'System Redesign', 'Client Negotiation', 'Product Strategy'],
   },
 ]
@@ -60,9 +60,9 @@ export default function Projects() {
       <div className="section-header reveal">
         <div className="section-kicker">Projects</div>
         <div>
-          <h2>Things I've fixed, built and figured out.</h2>
+          <h2>Selected work.</h2>
           <p className="section-intro">
-            Complex situations, real people, and what actually happened.
+            Operational leadership, technology implementation, team rebuilding and stakeholder alignment.
           </p>
         </div>
       </div>
