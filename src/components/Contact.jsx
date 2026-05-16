@@ -1,3 +1,8 @@
+import ObfuscatedText from './EmailImage'
+
+const EMAIL_PARTS = ['anouk', '@', 'vananrooij', '.com']
+const LINKEDIN_PARTS = ['linkedin.com', '/in/', 'anouk-van-anrooij']
+
 export default function Contact() {
   return (
     <section id="contact">
@@ -5,18 +10,19 @@ export default function Contact() {
         <div className="contact-grid">
           <div>
             <span className="section-kicker">Contact</span>
-            <h2 className="contact-title">Let's connect.</h2>
+            <h2 className="contact-title">Let's talk.</h2>
             <p className="section-intro">
-              I enjoy conversations about operations, technology, entrepreneurship and
-              organizational change. If you're working on something where people, processes and
-              technology need to come together — reach out.
+              If you want to have an honest conversation about work, people or what's
+              broken in your organization, I'm genuinely interested. Reach out.
             </p>
           </div>
           <div>
             <div className="contact-links">
-              <a href="mailto:anouk@vananrooij.com">anouk@vananrooij.com</a>
-              <a href="https://www.linkedin.com/in/anouk-van-anrooij/" target="_blank" rel="noopener">
-                linkedin.com/in/anouk-van-anrooij
+              <a href="mailto:anouk@vananrooij.com" aria-label="Email Anouk">
+                <ObfuscatedText parts={EMAIL_PARTS} />
+              </a>
+              <a href="https://www.linkedin.com/in/anouk-van-anrooij/" target="_blank" rel="noopener" aria-label="Anouk's LinkedIn profile">
+                <ObfuscatedText parts={LINKEDIN_PARTS} />
               </a>
             </div>
             <div className="hero-actions">

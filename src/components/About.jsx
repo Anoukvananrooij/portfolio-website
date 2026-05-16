@@ -4,29 +4,32 @@ export default function About() {
       <div className="section-header reveal">
         <div className="section-kicker">About</div>
         <div>
-          <h2>Operations, technology and people.</h2>
+          <h2>No nonsense. People first.</h2>
           <div className="about-body">
             <p>
-              I'm Anouk — I work where operations, technology and people need to come together.
-              I'm drawn to complexity: building structures that don't exist yet, implementing
-              technology that actually sticks, and helping teams find their footing during change.
+              I'm Anouk. I care most about the people I work with. Not as a nice-to-have,
+              but as the whole point. When teams trust each other and know what they're working
+              toward, almost everything else becomes solvable.
             </p>
             <p>
-              My background spans operational leadership, technology implementation and team
-              building across R&D, facility management, security and smart mobility. Early in my
-              career I developed a commercial mindset that still shapes how I communicate and
-              solve problems today.
+              My work connects operations, technology and organizational change. I've implemented
+              security systems, rebuilt teams, untangled R&D projects and helped organizations
+              think regionally about smart mobility. What drives me in all of it is whether the
+              work actually makes things better. For the organization, for the people in it, and
+              for the world around it.
             </p>
             <p>
-              I learn fast, think clearly under pressure, and enjoy stepping into unfamiliar
-              environments. I'm most energized when there's no existing playbook.
+              I work best in multidisciplinary teams where honesty is just the default. People
+              tend to open up to me pretty quickly. I think it's because I'm genuinely curious
+              about them, and because I say what I actually think.
             </p>
           </div>
           <div className="pill-row reveal" style={{ '--reveal-delay': '0.1s' }}>
+            <span className="pill">People First</span>
             <span className="pill">Operational Leadership</span>
-            <span className="pill">Technology Implementation</span>
-            <span className="pill">Process Design</span>
-            <span className="pill">Team Building</span>
+            <span className="pill">Technology That Sticks</span>
+            <span className="pill">Sustainable Impact</span>
+            <span className="pill">Honest by Default</span>
           </div>
         </div>
       </div>

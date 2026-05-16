@@ -13,8 +13,10 @@ export default function Experience() {
       <div className="section-header reveal">
         <div className="section-kicker">Experience</div>
         <div>
-          <h2>Organizations &amp; referrals.</h2>
-          <p className="section-intro">Previous organizations and roles. References available upon request.</p>
+          <h2>Where I've worked.</h2>
+          <p className="section-intro">
+            Previous roles and organizations. Happy to connect you with people I've worked with.
+          </p>
         </div>
       </div>
 
@@ -25,12 +27,6 @@ export default function Experience() {
               <h3>{name}</h3>
               <p className="role">{role}</p>
             </div>
-            <a
-              className="button"
-              href={`mailto:anouk@vananrooij.com?subject=Referral request - ${name}`}
-            >
-              Request Referral
-            </a>
           </article>
         ))}
       </div>
