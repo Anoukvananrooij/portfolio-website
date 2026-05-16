@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anouk van Anrooij — Portfolio</title>
+  <meta name="description" content="Operator & builder. I design, run and scale tech-enabled businesses." />
+  <style>
+    /* --- Design tokens (change these to restyle quickly) --- */
+    :root{
+      --bg: #0b0e14;            /* page background */
+      --panel: #121723;         /* cards/nav background */
+      --text: #e6e6e6;          /* primary text */
+      --muted: #aab0c0;         /* secondary text */
+      --accent: #7bdcff;        /* links & accents */
+      --accent-2: #ffb86b;      /* subtle highlight */
+      --radius: 14px;
+      --shadow: 0 10px 24px rgba(0,0,0,.35);
+      --maxw: 980px;
+    }
+
+    /* --- Base --- */
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    *{box-sizing:border-box}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    .panel{background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* --- Top nav --- */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(18,23,35,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav .wrap{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .links a{margin-left:18px;color:var(--muted)}
+    .links a:hover{color:var(--text)}
+
+    /* --- Hero / header --- */
+    .hero{margin:28px auto 18px}
+    .hero .inner{display:grid;grid-template-columns:1fr 220px;gap:28px;padding:34px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(123,220,255,.12);color:var(--accent);font-size:.85rem}
+    h1{margin:10px 0 6px;font-size:2.2rem;line-height:1.2}
+    .lead{color:var(--muted)}
+    .photo{width:220px;height:220px;border-radius:18px;background:#0b0e14 center/cover no-repeat;box-shadow:var(--shadow)}
+    @media (max-width:800px){ .hero .inner{grid-template-columns:1fr} .photo{order:-1;justify-self:center} }
+
+    /* --- Sections --- */
+    section{margin:26px 0}
+    section .inner{padding:26px}
+    h2{margin:0 0 14px;font-size:1.3rem;letter-spacing:.2px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    @media (max-width:800px){ .grid.cols-2{grid-template-columns:1fr} }
+
+    /* --- Cards / lists --- */
+    .card{padding:18px;border:1px solid rgba(255,255,255,.06);border-radius:12px;background:rgba(255,255,255,.02)}
+    .muted{color:var(--muted)}
+    .row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted);font-size:.85rem;margin:4px 6px 0 0}
+
+    /* --- Footer --- */
+    footer{color:var(--muted);text-align:center;padding:22px 0}
+  </style>
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <div class="nav panel">
+    <div class="wrap">
+      <div class="brand">Anouk van Anrooij</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <header class="hero panel">
+      <div class="inner">
+        <div>
+          <span class="tag">Visionary • Analytical • Tech-inspired </span>
+          <h1>Anouk van Anrooij</h1>
+          <p class="lead">
+            I design, run and scale tech-enabled businesses. I love turning messy operations
+            into clear systems, and managing teams so that everyone loves what they do.
+          </p>
+          <p class="muted">
+            Based in Helmond/Eindhoven (NL). Currently working in interim management positions at <strong>AVA Management B.V.</strong> as the location lead of
+            <strong>Microlab Strijp-S</strong> (coworking space).
+          </p>
+          <p>
+            <a href="#contact">Get in touch</a>
+            &nbsp;•&nbsp;
+            <a href="#projects">See projects</a>
+          </p>
+        </div>
+        <!-- Tip: drop a square photo named photo.jpg into /site/ to show it -->
+        <div class="photo" style="background-image:url('./photo.jpg'), linear-gradient(135deg,#191f2d,#0d1220)"></div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <div class="inner">
+        <h2>About</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <p>
+              I’m an operations manager with a processs mindset: equal parts <em>people, process and tech</em>.
+              With an entrepreneurial mnindset, I'm dedicated to solving issues and achieving results.
+            </p>
+            <p class="muted">Sectors: coworking, security, robotics & data, (CRM/ERP) process implementations, circular business models.</p>
+          </div>
+          <div class="card">
+            <p><strong>What I’m looking for</strong></p>
+            <ul>
+              <li>Operations management positions</li>
+              <li>Financial education opportunities</li>
+              <li>Discussions about robotics/ai implementations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="panel">
+      <div class="inner">
+        <h2>Experience</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="row">
+              <div>
+                <strong>Founder — AVA Management B.V.</strong>
+                <div class="muted">SME (interim) operations / process implementations consulting</div>
+              </div>
+              <div class="muted">2025 — now</div>
+            </div>
+            <ul>
+              <li>Set up processes, data flows, and tech stacks for SMEs and startups.</li>
+              <li>Managed teams up to 25 people.</li>
+              <li>Implemented operational processes in 2 seperate organizations in change trajectories.</li>
+              <li>Led several projects, among others: software (CRM) migration, cleaning robot development and people counting dashboard using an AI camera.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="row">
+              <div>
+                <strong>Co-founder — Airlo</strong>
+                <div class="muted">Smart access & HVAC retrofit for coworking</div>
+              </div>
+              <div class="muted">2024 — now</div>
+            </div>
+            <ul>
+              <li>Architecture: ZKTeco, custom cloud, OfficeRnD integrations.</li>
+              <li>Pilots with Microlab; roadmap for access-as-a-service.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="row">
+              <div>
+                <strong>Location/operations Lead — Microlab</strong>
+                <div class="muted">Coworking operator (Eindhoven/Rotterdam)</div>
+              </div>
+              <div class="muted">2023 — now</div>
+            </div>
+            <ul>
+              <li>OfficeRnD rollout, pricing, onboarding, and event operations.</li>
+              <li>Process automation and account management.</li>
+              <li>Team recruitment and onboarding.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel">
+      <div class="inner">
+        <h2>Selected Projects</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <strong>My Microlab Platform</strong>
+            <p class="muted">Member portal revamp: onboarding, pricing flows, and events.</p>
+            <span class="pill">OfficeRnD</span><span class="pill">Automation</span><span class="pill">CX</span>
+          </div>
+          <div class="card">
+            <strong>Airlo Access & HVAC</strong>
+            <p class="muted">Retrofit stack: ZKTeco + custom cloud + energy insights.</p>
+            <span class="pill">IoT</span><span class="pill">APIs</span><span class="pill">BMS</span>
+          </div>
+          <div class="card">
+            <strong>Cleaning robot</strong>
+            <p class="muted">Redesign of the system design and build of the project plan, contract renegotiations with the client</p>
+            <span class="pill">Optimization</span><span class="pill">Scheduling</span><span class="pill">AI</span>
+          </div>
+          <div class="card">
+            <strong>People counting dashboard</strong>
+            <p class="muted">Using an in-house developed programmable AI camera, we counted people on a soccer field and displayed the results in a web dashboard</p>
+            <span class="pill">Robotics</span><span class="pill">Data</span><span class="pill">3D</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="panel">
+      <div class="inner">
+        <h2>Skills</h2>
+        <div class="card">
+          <p class="muted">Operations management • Process design • HR & Recruitment • Stakeholder management • Circular business models • Business Development • Tools: Hubspot, Docker, Git, Caddy</p>
+          <p>
+            <span class="pill">Operations</span>
+            <span class="pill">Process implementations</span>
+            <span class="pill">Software implementations</span>
+            <span class="pill">Change management</span>
+            <span class="pill">Leadership</span>
+            <span class="pill">HR</span>
+            <span class="pill">Account management</span>
+            <span class="pill">Project management</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel">
+      <div class="inner">
+        <h2>Contact</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <p>For projects, collaborations or coffee:</p>
+            <p>
+              <strong>Email:</strong> <a href="mailto:anouk@vananrooij.com">anouk@vananrooij.com</a><br>
+              <strong>Location:</strong> Helmond / Eindhoven, NL
+            </p>
+          </div>
+          <div class="card">
+            <p class="muted">Tip: after we set up your server, we’ll add a simple contact form that emails you without third-party services.</p>
+            <p class="muted">We’ll also add a “/cv.pdf” download if you want a one-pager.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    © <span id="y"></span> Anouk van Anrooij • Built with Caddy + Docker
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+      })
+    });
+  </script>
+</body>
+</html>

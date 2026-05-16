@@ -1,0 +1,4 @@
+:80 {
+    root * /usr/share/caddy/site
+    file_server
+}

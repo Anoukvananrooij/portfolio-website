@@ -1,0 +1,9 @@
+services:
+  caddy:
+    image: caddy:2
+    container_name: my-caddy
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/usr/share/caddy/site
+      - ./Caddyfile:/etc/caddy/Caddyfile
