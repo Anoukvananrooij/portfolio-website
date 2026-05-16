@@ -205,7 +205,7 @@ h3 {
 .hero h1            { animation-delay: 0.15s; }
 .hero .hero-subtitle { animation-delay: 0.28s; }
 .hero .hero-actions { animation-delay: 0.42s; }
-.hero .photo-wrapper { animation: fadeIn 0.9s ease 0.2s both; }
+.hero .photo-frame { animation: fadeIn 0.9s ease 0.2s both; }
 
 /* Hero */
 .hero {
@@ -241,7 +241,23 @@ h3 {
   margin-top: 32px;
 }
 
+.photo-frame {
+  position: relative;
+}
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: var(--warm);
+  opacity: 0.18;
+  transform: translate(14px, 14px);
+  z-index: 0;
+}
+
 .photo-wrapper {
+  position: relative;
+  z-index: 1;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;

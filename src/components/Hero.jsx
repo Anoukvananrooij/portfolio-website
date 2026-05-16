@@ -20,8 +20,10 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="photo-wrapper">
-        <img src="/photo.png" alt="Portrait of Anouk van Anrooij" />
+      <div className="photo-frame">
+        <div className="photo-wrapper">
+          <img src="/photo.png" alt="Portrait of Anouk van Anrooij" />
+        </div>
       </div>
     </section>
   )
