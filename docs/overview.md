@@ -16,12 +16,12 @@ A single-page resume/portfolio site presenting Anouk's background, selected proj
 
 | Section | Content |
 |---|---|
-| Hero | Name, tagline, CTA buttons (Book Appointment, LinkedIn, Email) |
-| About | Professional summary and core competency pills |
-| Projects | 3 detailed case studies + 3 supporting cards (accordion/details) |
+| Hero | Name, tagline, CTA buttons (Book Meeting, LinkedIn, Email) |
+| About | Personal bio and core competency pills |
+| Projects | 3 detailed case studies (accordion) + 3 supporting cards |
 | Education | MSc Strategic Management (cum laude) + BSc Liberal Arts & Sciences (cum laude), Tilburg University |
 | Experience | 6 employer cards with referral request links |
-| Contact | Email, LinkedIn, Book Appointment button |
+| Contact | Email, LinkedIn, Book a Meeting button |
 
 ## Key Projects Documented
 
@@ -34,28 +34,48 @@ A single-page resume/portfolio site presenting Anouk's background, selected proj
 
 ## Tech Stack
 
-- Pure HTML/CSS/JS — no framework, no build step
-- Fonts: Avenir / system-ui stack
-- Design: warm neutral palette (`#f7f4ee` background, `#6f8490` accent)
+- React 18 + Vite — single-page app with component-per-section architecture
+- CSS custom properties — warm neutral palette (`#f7f4ee` background, `#6f8490` accent)
 - Responsive: CSS Grid, `clamp()` fluid typography, 900px and 560px breakpoints
-- Interactive: `<details>` accordion for project cards, accordion-group JS (only one open at a time)
+- Accordion: `<details>/<summary>` with useRef for controlled state
+- Docker multi-stage build: `node:22-alpine` → `nginx:alpine`
+- Nginx Proxy Manager for HTTPS (Let's Encrypt via Cloudflare DNS-01)
+- GitHub Actions for CI/CD
 
 ## File Structure
 
 ```
 /
-├── Caddyfile               # Caddy web server config
-├── docker-compose.yml      # Docker Compose (Caddy container)
-├── docs/
-│   ├── overview.md         # This file
-│   └── deployment.md       # Deployment guide
-└── site/                   # Files served by Caddy
-    ├── index.html          # Main portfolio page
-    └── photo.png           # Profile photo (ChatGPT-generated portrait)
+├── Dockerfile                    # Multi-stage build
+├── docker-compose.yml            # portfolio + NPM + MariaDB
+├── nginx.conf                    # nginx SPA config
+├── .github/workflows/deploy.yml  # CI/CD pipeline
+├── src/
+│   ├── App.jsx                   # Root component, imports all sections
+│   ├── App.css                   # All styles (CSS custom properties)
+│   ├── main.jsx                  # Vite entry point
+│   └── components/
+│       ├── Header.jsx            # Sticky nav
+│       ├── Hero.jsx              # Hero section with photo
+│       ├── About.jsx             # Bio + skill pills
+│       ├── Projects.jsx          # Accordion project cards
+│       ├── Education.jsx         # Degree cards
+│       ├── Experience.jsx        # Employer cards
+│       └── Contact.jsx           # Contact card
+├── public/
+│   └── photo.png                 # Profile photo
+└── docs/
+    ├── overview.md               # This file
+    ├── deployment.md             # Deployment guide
+    └── content/                  # Source-of-truth for site copy
+        ├── hero.md
+        ├── about.md
+        ├── projects.md
+        ├── education.md
+        ├── experience.md
+        └── contact.md
 ```
 
 ## Placeholder / TODOs
 
-- `CALENDAR_URL_HERE` in the contact section — replace with actual booking URL (Calendly etc.)
-- Phone number marked "to be added" in contact section
-- Consider adding `/cv.pdf` for a downloadable one-pager
+- `CALENDAR_URL_HERE` in Hero and Contact — replace with actual booking URL (Calendly etc.)

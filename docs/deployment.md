@@ -1,50 +1,68 @@
 # Deployment Guide
 
-The site runs as a static file server inside Docker using [Caddy](https://caddyserver.com/).
+The site is a React (Vite) app built into a static bundle and served by nginx inside Docker. Nginx Proxy Manager (NPM) handles HTTPS termination with a Let's Encrypt certificate via Cloudflare DNS challenge.
 
 ## Requirements
 
-- Docker + Docker Compose installed on the host
+- Docker + Docker Compose on the host
+- A `.env` file with `DB_PASSWORD` and `DB_ROOT_PASSWORD` (see `.env.example`)
 
-## Local preview
-
-```bash
-docker compose up
-# Open http://localhost:80
-```
-
-## Production
-
-Deploy the whole repository to your server, then:
+## Local development
 
 ```bash
-docker compose up -d
+npm install
+npm run dev
+# Open http://localhost:5173
 ```
 
-Caddy serves everything in `./site/` on port 80. To enable HTTPS, update the `Caddyfile`:
+## Local Docker preview
 
-```
-anouk.vananrooij.com {
-    root * /usr/share/caddy/site
-    file_server
-}
+```bash
+docker compose up --build
+# Open http://localhost
 ```
 
-Caddy will automatically obtain and renew a Let's Encrypt certificate.
+## Production setup
+
+1. Clone repo on server under `/opt/portfolio`
+2. Copy `.env` with DB credentials
+3. Start services:
+
+```bash
+cd /opt/portfolio
+docker compose up --build -d
+```
+
+4. Configure Nginx Proxy Manager at `http://<server-ip>:81`:
+   - Add proxy host: your domain → `portfolio:80`
+   - Add SSL certificate via Cloudflare DNS challenge
+
+## CI/CD
+
+GitHub Actions deploys on every push to `main`. The workflow SSHes into the server and runs:
+
+```bash
+cd /opt/portfolio
+git pull origin main
+docker compose up --build -d --remove-orphans
+```
+
+Secrets required in GitHub repository settings:
+- `SERVER_IP` — server IP address
+- `SERVER_USER` — SSH username
+- `SERVER_PASSWORD` — SSH password
 
 ## Files that matter for deployment
 
 | File | Purpose |
 |---|---|
-| `Caddyfile` | Web server config — change `:80` to your domain for HTTPS |
-| `docker-compose.yml` | Defines the Caddy container and mounts |
-| `site/index.html` | The portfolio page |
-| `site/photo.png` | Profile photo |
+| `Dockerfile` | Multi-stage build: node → nginx |
+| `nginx.conf` | nginx SPA config (try_files, gzip, caching) |
+| `docker-compose.yml` | portfolio app + Nginx Proxy Manager + MariaDB |
+| `.env` | DB credentials (gitignored) |
+| `.github/workflows/deploy.yml` | CI/CD pipeline |
 
 ## Updating the site
 
-1. Edit `site/index.html` directly
-2. Commit with git
-3. Pull on the server and restart: `docker compose up -d --force-recreate`
-
-No build step needed — changes to `site/` are served immediately after the container restarts (or instantly if the volume is already mounted and you're just editing files in place).
+1. Edit source files in `src/`
+2. Push to `main` — GitHub Actions handles the rest
