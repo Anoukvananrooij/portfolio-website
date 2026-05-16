@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <div className="contact-card">
+      <div className="contact-card reveal">
         <div className="contact-grid">
           <div>
             <span className="section-kicker">Contact</span>

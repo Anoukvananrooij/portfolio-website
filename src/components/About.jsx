@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about">
-      <div className="section-header">
+      <div className="section-header reveal">
         <div className="section-kicker">About</div>
         <div>
           <h2>Operations, technology and people.</h2>
@@ -22,7 +22,7 @@ export default function About() {
               environments. I'm most energized when there's no existing playbook.
             </p>
           </div>
-          <div className="pill-row">
+          <div className="pill-row reveal" style={{ '--reveal-delay': '0.1s' }}>
             <span className="pill">Operational Leadership</span>
             <span className="pill">Technology Implementation</span>
             <span className="pill">Process Design</span>

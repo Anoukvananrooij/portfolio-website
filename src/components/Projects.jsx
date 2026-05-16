@@ -57,7 +57,7 @@ export default function Projects() {
 
   return (
     <section id="projects">
-      <div className="section-header">
+      <div className="section-header reveal">
         <div className="section-kicker">Projects</div>
         <div>
           <h2>Selected work.</h2>
@@ -71,7 +71,8 @@ export default function Projects() {
         {MAIN_PROJECTS.map((p, i) => (
           <details
             key={p.title}
-            className="project-card"
+            className="project-card reveal"
+            style={{ '--reveal-delay': `${i * 0.08}s` }}
             ref={el => refs.current[i] = el}
             onToggle={handleToggle(i)}
           >
@@ -98,8 +99,8 @@ export default function Projects() {
       </div>
 
       <div className="supporting-grid">
-        {SUPPORTING_PROJECTS.map(p => (
-          <div key={p.title} className="project-card">
+        {SUPPORTING_PROJECTS.map((p, i) => (
+          <div key={p.title} className="project-card reveal" style={{ '--reveal-delay': `${i * 0.08}s` }}>
             <div className="supporting-inner">
               <h3>{p.title}</h3>
               <p className="project-blurb">{p.summary}</p>

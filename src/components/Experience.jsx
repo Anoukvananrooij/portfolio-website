@@ -10,7 +10,7 @@ const EMPLOYERS = [
 export default function Experience() {
   return (
     <section id="experience">
-      <div className="section-header">
+      <div className="section-header reveal">
         <div className="section-kicker">Experience</div>
         <div>
           <h2>Organizations &amp; referrals.</h2>
@@ -19,8 +19,8 @@ export default function Experience() {
       </div>
 
       <div className="experience-grid">
-        {EMPLOYERS.map(({ name, role }) => (
-          <article key={name} className="experience-card">
+        {EMPLOYERS.map(({ name, role }, i) => (
+          <article key={name} className="experience-card reveal" style={{ '--reveal-delay': `${i * 0.06}s` }}>
             <div>
               <h3>{name}</h3>
               <p className="role">{role}</p>

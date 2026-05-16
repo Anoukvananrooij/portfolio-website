@@ -1,7 +1,7 @@
 export default function Education() {
   return (
     <section id="education">
-      <div className="section-header">
+      <div className="section-header reveal">
         <div className="section-kicker">Education</div>
         <div>
           <h2>Interdisciplinary and international.</h2>
@@ -12,14 +12,14 @@ export default function Education() {
       </div>
 
       <div className="education-grid">
-        <article className="info-card">
+        <article className="info-card reveal">
           <h3>MSc Strategic Management — Entrepreneurship</h3>
           <p className="card-meta">Tilburg University · Cum Laude · GPA 8.3 · Best Thesis Award</p>
           <p className="card-thesis">
             <em>How actors in their ecosystem influence the ability of enterprises with an upcycling business model to upscale</em>
           </p>
         </article>
-        <article className="info-card">
+        <article className="info-card reveal" style={{ '--reveal-delay': '0.08s' }}>
           <h3>BSc Liberal Arts &amp; Sciences — Business &amp; Economics</h3>
           <p className="card-meta">Tilburg University · Cum Laude · GPA 8.5</p>
           <p className="card-thesis">
@@ -28,7 +28,7 @@ export default function Education() {
         </article>
       </div>
 
-      <article className="info-card" style={{ marginTop: '14px' }}>
+      <article className="info-card reveal" style={{ marginTop: '14px', '--reveal-delay': '0.16s' }}>
         <h3>Recognition</h3>
         <ul className="recognition-list">
           <li>Winner of the Tilburg University Challenge ideation category</li>
