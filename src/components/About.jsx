@@ -30,12 +30,6 @@ export default function About() {
               I work independently and take genuine ownership of the challenges I take on.
             </p>
           </div>
-          <div className="pill-row reveal" style={{ '--reveal-delay': '0.1s' }}>
-            <span className="pill">Operational Leadership</span>
-            <span className="pill">Technology Implementation</span>
-            <span className="pill">Process Design</span>
-            <span className="pill">Team Building</span>
-          </div>
         </div>
       </div>
     </section>

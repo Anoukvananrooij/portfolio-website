@@ -10,10 +10,10 @@ export default function Contact() {
         <div className="contact-grid">
           <div>
             <span className="section-kicker">Contact</span>
-            <h2 className="contact-title">Let's talk.</h2>
+            <h2 className="contact-title">Get in touch.</h2>
             <p className="section-intro">
-              Available for conversations about operational challenges, technology
-              implementation and organizational change. Reach out directly or book a call.
+              Open to operational and technology challenges in security and related fields.
+              Book a call or reach out directly.
             </p>
           </div>
           <div>
@@ -29,7 +29,6 @@ export default function Contact() {
               <a className="button primary" href="https://calendar.app.google/DtQvEAzVyGVeotk28" target="_blank" rel="noopener">
                 Book a Meeting
               </a>
-              <a className="button" href="mailto:anouk@vananrooij.com">Email</a>
             </div>
           </div>
         </div>

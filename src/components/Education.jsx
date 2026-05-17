@@ -16,7 +16,7 @@ export default function Education() {
           <h3>MSc Strategic Management — Entrepreneurship</h3>
           <p className="card-meta">Tilburg University · Cum Laude · GPA 8.3 · Best Thesis Award</p>
           <p className="card-thesis">
-            <em>How actors in their ecosystem influence the ability of enterprises with an upcycling business model to upscale</em>
+            <em>Scalability for sustainability: How actors in their ecosystem influence the upscaling of businesses with an upcycling business model</em>
           </p>
         </article>
         <article className="info-card reveal" style={{ '--reveal-delay': '0.08s' }}>
