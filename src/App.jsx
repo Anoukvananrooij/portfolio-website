@@ -26,8 +26,8 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
-        <Education />
         <Experience />
+        <Education />
         <Contact />
       </main>
       <footer className="page footer">

@@ -12,8 +12,8 @@ export default function Contact() {
             <span className="section-kicker">Contact</span>
             <h2 className="contact-title">Let's talk.</h2>
             <p className="section-intro">
-              If you want to have an honest conversation about work, people or what's
-              broken in your organization, I'm genuinely interested. Reach out.
+              Available for conversations about operational challenges, technology
+              implementation and organizational change. Reach out directly or book a call.
             </p>
           </div>
           <div>
@@ -26,7 +26,7 @@ export default function Contact() {
               </a>
             </div>
             <div className="hero-actions">
-              <a className="button primary" href="CALENDAR_URL_HERE" target="_blank" rel="noopener">
+              <a className="button primary" href="https://calendar.app.google/DtQvEAzVyGVeotk28" target="_blank" rel="noopener">
                 Book a Meeting
               </a>
               <a className="button" href="mailto:anouk@vananrooij.com">Email</a>

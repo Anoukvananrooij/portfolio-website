@@ -8,7 +8,7 @@ export default function Hero() {
           I work where operations, technology and people need to come together.
         </p>
         <div className="hero-actions">
-          <a className="button primary" href="CALENDAR_URL_HERE" target="_blank" rel="noopener">
+          <a className="button primary" href="https://calendar.app.google/DtQvEAzVyGVeotk28" target="_blank" rel="noopener">
             Book a Meeting
           </a>
           <a className="button" href="https://www.linkedin.com/in/anouk-van-anrooij/" target="_blank" rel="noopener">
