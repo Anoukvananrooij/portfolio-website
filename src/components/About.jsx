@@ -27,6 +27,7 @@ export default function About() {
             </p>
             <p>
               During university I won three national entrepreneurship competitions.
+              I work independently and take genuine ownership of the challenges I take on.
             </p>
           </div>
           <div className="pill-row reveal" style={{ '--reveal-delay': '0.1s' }}>

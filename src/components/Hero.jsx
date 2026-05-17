@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top" aria-label="Introduction">
       <div>
-        <span className="eyebrow">Operations · Technology · Organizational Growth</span>
+        <span className="eyebrow">Operations · Technology · Entrepreneurship</span>
         <h1>Anouk van Anrooij</h1>
         <p className="hero-subtitle">
           I implement operational technology and build the processes and teams that make it work in practice.

@@ -1,4 +1,5 @@
 const EMPLOYERS = [
+  { name: 'AVA Investments BV', role: 'Founder & Director', years: '2025 – present' },
   { name: 'Microlab', role: 'Location Manager', years: '2025 – 2026' },
   { name: 'Microtuin', role: 'Location Manager', years: '2025', note: 'Coworking & facility operations — team management, tenant relations, sales, events and facility management.' },
   { name: 'Alltrons', role: 'Operational Manager', years: '2023 – 2024' },
