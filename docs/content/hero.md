@@ -1,12 +1,12 @@
 # Hero
 
+**Eyebrow:** Operations · Technology · Entrepreneurship
+
 **Name:** Anouk van Anrooij
 
-**Tagline:** Operations • Technology • Organizational Growth
-
-**Subtitle:** I work where operations, technology and people need to come together effectively.
+**Subtitle:** I implement operational technology and build the processes and teams that make it work in practice.
 
 **Actions:**
-- Book Appointment (primary CTA) — links to calendar booking URL
+- Book a Meeting (primary CTA) — https://calendar.app.google/DtQvEAzVyGVeotk28
 - LinkedIn — https://www.linkedin.com/in/anouk-van-anrooij/
 - Email — anouk@vananrooij.com
