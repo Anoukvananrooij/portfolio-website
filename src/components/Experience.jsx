@@ -6,16 +6,10 @@ const EMPLOYERS = [
     note: 'Available as a project or operations manager, or for other entrepreneurial collaborations.',
   },
   {
-    name: 'Microlab',
+    name: 'Microlab & Microtuin',
     role: 'Location Manager',
     years: '2025 – 2026',
-    note: 'Multi-tenant coworking & facility operations. Led security technology implementation, team management, tenant relations, sales and facility operations across a 1,500-user building.',
-  },
-  {
-    name: 'Microtuin',
-    role: 'Location Manager',
-    years: '2025',
-    note: 'Multi-tenant coworking & facility operations. Responsible for team management, tenant relations, sales, events and facility management.',
+    note: 'Multi-tenant coworking & facility operations across two buildings. Led team management, tenant relations, sales, events, facility management and security technology implementation.',
   },
   {
     name: 'Alltrons',
@@ -56,13 +50,11 @@ export default function Experience() {
         </div>
       </div>
 
-      <div className="experience-list reveal">
+      <div className="experience-grid reveal">
         {EMPLOYERS.map(({ name, role, years, note }) => (
           <div key={name} className="experience-card">
-            <div className="experience-item-header">
-              <span className="experience-name">{name}</span>
-              <span className="experience-meta">{role} · {years}</span>
-            </div>
+            <span className="experience-name">{name}</span>
+            <p className="experience-meta">{role} · {years}</p>
             {note && <p className="experience-note">{note}</p>}
           </div>
         ))}

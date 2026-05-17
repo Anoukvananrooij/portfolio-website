@@ -14,13 +14,13 @@ export default function About() {
               periods of significant change.
             </p>
             <p>
-              I help organizations build operational structures that work in practice. This
+              I help organisations build operational structures that work in practice. This
               means understanding both the technical and human side: the people developing
               the technology, the teams implementing it and the end users who have to work
               with it every day.
             </p>
             <p>
-              I learn quickly and step into unfamiliar environments without much friction —
+              I learn quickly and adapt to unfamiliar environments —
               whether that is a new industry, a different organisation or a different country.
               I am motivated by complexity, by pressure and by building structure where it
               does not yet exist.

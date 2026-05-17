@@ -16,14 +16,14 @@ export default function Education() {
           <h3>MSc Strategic Management — Entrepreneurship</h3>
           <p className="card-meta">Tilburg University · Cum Laude · GPA 8.3 · Best Thesis Award</p>
           <p className="card-thesis">
-            <em>Scalability for sustainability: How actors in their ecosystem influence the upscaling of businesses with an upcycling business model</em>
+            Scalability for sustainability: How actors in their ecosystem influence the upscaling of businesses with an upcycling business model
           </p>
         </article>
         <article className="info-card reveal" style={{ '--reveal-delay': '0.08s' }}>
           <h3>BSc Liberal Arts &amp; Sciences — Business &amp; Economics</h3>
           <p className="card-meta">Tilburg University · Cum Laude · GPA 8.5</p>
           <p className="card-thesis">
-            <em>Performance feedback in project management: A study of managerial responses to negative performance feedback</em>
+            Performance feedback in project management: A study of managerial responses to negative performance feedback
           </p>
         </article>
       </div>
