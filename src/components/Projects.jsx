@@ -22,16 +22,6 @@ const PROJECTS = [
     topics: ['R&D Management', 'Stakeholder Management', 'Client Negotiation', 'Team Leadership'],
   },
   {
-    shortTitle: 'Access Control',
-    title: 'Troubleshooting and Stabilization of a Wireless Access Control System',
-    summary: 'Troubleshooting and stabilising a cloud-based wireless access control system serving several hundred users in a building with round-the-clock operations.',
-    context: 'The system was experiencing persistent reliability issues affecting daily access for users and staff. The failures required a structural solution rather than repeated workarounds.',
-    role: 'Led the troubleshooting process and coordinated the infrastructure change. Subsequently trained the on-site team to manage and operate the system independently.',
-    implemented: 'Systematic troubleshooting identified the root cause as a networking problem at the gateway level. The system was switched from wireless to wired connections and the infrastructure was reconfigured. The on-site team was then trained on day-to-day system management.',
-    result: 'The system stabilised and the team was able to manage it independently without ongoing external support.',
-    topics: ['Access Control', 'Troubleshooting', 'Team Training'],
-  },
-  {
     shortTitle: 'AI Camera Pilot',
     title: 'AI Camera Analytics Pilot',
     summary: 'Joining an AI camera pilot as the interface between the client and our development team — gathering requirements through end user interviews, configuring the software platform and ensuring the dashboard reflected how operational teams actually worked.',
@@ -50,6 +40,16 @@ const PROJECTS = [
     implemented: 'Approximately 60 private organisations were approached, interviewed and recruited into the ecosystem. A shared roadmap was developed and agreed upon across public and private parties. Funding was secured and a regional kickoff event was organised.',
     result: 'A functioning public-private ecosystem was established across the region. The kickoff event, attended by the majority of participating organisations, marked the transition from planning to active collaboration.',
     topics: ['Ecosystem Building', 'Stakeholder Engagement', 'Public-Private Collaboration'],
+  },
+  {
+    shortTitle: 'Access Control',
+    title: 'Troubleshooting and Stabilization of a Wireless Access Control System',
+    summary: 'Troubleshooting and stabilising a cloud-based wireless access control system serving several hundred users in a building with round-the-clock operations.',
+    context: 'The system was experiencing persistent reliability issues affecting daily access for users and staff. The failures required a structural solution rather than repeated workarounds.',
+    role: 'Led the troubleshooting process and coordinated the infrastructure change. Subsequently trained the on-site team to manage and operate the system independently.',
+    implemented: 'Systematic troubleshooting identified the root cause as a networking problem at the gateway level. The system was switched from wireless to wired connections and the infrastructure was reconfigured. The on-site team was then trained on day-to-day system management.',
+    result: 'The system stabilised and the team was able to manage it independently without ongoing external support.',
+    topics: ['Access Control', 'Troubleshooting', 'Team Training'],
   },
 ]
 
