@@ -5,7 +5,7 @@ export default function Hero() {
         <span className="eyebrow">Operations · Technology · Organizational Growth</span>
         <h1>Anouk van Anrooij</h1>
         <p className="hero-subtitle">
-          I work where operations, technology and people need to come together.
+          I implement operational technology and build the processes and teams that make it work in practice.
         </p>
         <div className="hero-actions">
           <a className="button primary" href="https://calendar.app.google/DtQvEAzVyGVeotk28" target="_blank" rel="noopener">
