@@ -4,9 +4,9 @@ export default function Education() {
       <div className="section-header reveal">
         <div className="section-kicker">Education</div>
         <div>
-          <h2>Interdisciplinary and international.</h2>
+          <h2>Two degrees, both cum laude.</h2>
           <p className="section-intro">
-            Both degrees cum laude at Tilburg University, with an exchange semester at Monash University Malaysia.
+            Tilburg University, with an exchange semester at Monash University Malaysia.
           </p>
         </div>
       </div>
@@ -28,15 +28,6 @@ export default function Education() {
         </article>
       </div>
 
-      <article className="info-card reveal" style={{ marginTop: '14px', '--reveal-delay': '0.16s' }}>
-        <h3>Recognition</h3>
-        <ul className="recognition-list">
-          <li>Winner of the Tilburg University Challenge ideation category</li>
-          <li>Winner of Rabo Food Forward</li>
-          <li>Winner of Dragon's Den entrepreneurship pitching competition</li>
-          <li>Raised €12,000 in early-stage funding for an entrepreneurship concept during university</li>
-        </ul>
-      </article>
     </section>
   )
 }

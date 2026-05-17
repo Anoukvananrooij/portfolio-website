@@ -20,9 +20,13 @@ export default function About() {
               with it every day.
             </p>
             <p>
-              I learn quickly and step into unfamiliar environments without much friction.
+              I learn quickly and step into unfamiliar environments without much friction —
+              whether that is a new industry, a different organisation or a different country.
               I am motivated by complexity, by pressure and by building structure where it
               does not yet exist.
+            </p>
+            <p>
+              During university I won three national entrepreneurship competitions.
             </p>
           </div>
           <div className="pill-row reveal" style={{ '--reveal-delay': '0.1s' }}>

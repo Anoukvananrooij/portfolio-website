@@ -370,6 +370,13 @@ details[open] .toggle-icon { transform: rotate(45deg); }
   margin: 6px 0 0;
 }
 
+.experience-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
 /* Contact */
 .contact-card {
   background: var(--surface);
