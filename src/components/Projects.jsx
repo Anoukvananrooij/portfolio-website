@@ -32,16 +32,6 @@ const PROJECTS = [
     topics: ['Requirements Gathering', 'Software Configuration', 'Stakeholder Communication', 'AI Cameras'],
   },
   {
-    shortTitle: 'Ecosystem Building',
-    title: 'Building a Regional Public-Private Ecosystem',
-    summary: 'Developing a public-private ecosystem around a shared regional innovation agenda, aligning approximately 60 private organisations with public partners around a common roadmap.',
-    context: 'In collaboration with regional public institutions, a structured effort was set up to build an innovation ecosystem across a region in the Netherlands, aligning public and private parties around a shared agenda.',
-    role: 'Led the stakeholder development process — identifying, interviewing and recruiting private organisations, aligning them with the public partners involved, securing funding and organising the regional launch event.',
-    implemented: 'Approximately 60 private organisations were approached, interviewed and recruited into the ecosystem. A shared roadmap was developed and agreed upon across public and private parties. Funding was secured and a regional kickoff event was organised.',
-    result: 'A functioning public-private ecosystem was established across the region. The kickoff event, attended by the majority of participating organisations, marked the transition from planning to active collaboration.',
-    topics: ['Ecosystem Building', 'Stakeholder Engagement', 'Public-Private Collaboration'],
-  },
-  {
     shortTitle: 'Access Control',
     title: 'Troubleshooting and Stabilization of a Wireless Access Control System',
     summary: 'Troubleshooting and stabilising a cloud-based wireless access control system serving several hundred users in a building with round-the-clock operations.',
@@ -50,6 +40,16 @@ const PROJECTS = [
     implemented: 'Systematic troubleshooting identified the root cause as a networking problem at the gateway level. The system was switched from wireless to wired connections and the infrastructure was reconfigured. The on-site team was then trained on day-to-day system management.',
     result: 'The system stabilised and the team was able to manage it independently without ongoing external support.',
     topics: ['Access Control', 'Troubleshooting', 'Team Training'],
+  },
+  {
+    shortTitle: 'Ecosystem Building',
+    title: 'Building a Regional Public-Private Ecosystem',
+    summary: 'Developing a public-private ecosystem around a shared regional innovation agenda, aligning approximately 60 private organisations with public partners around a common roadmap.',
+    context: 'In collaboration with regional public institutions, a structured effort was set up to build an innovation ecosystem across a region in the Netherlands, aligning public and private parties around a shared agenda.',
+    role: 'Led the stakeholder development process — identifying, interviewing and recruiting private organisations, aligning them with the public partners involved, securing funding and organising the regional launch event.',
+    implemented: 'Approximately 60 private organisations were approached, interviewed and recruited into the ecosystem. A shared roadmap was developed and agreed upon across public and private parties. Funding was secured and a regional kickoff event was organised.',
+    result: 'A functioning public-private ecosystem was established across the region. The kickoff event, attended by the majority of participating organisations, marked the transition from planning to active collaboration.',
+    topics: ['Ecosystem Building', 'Stakeholder Engagement', 'Public-Private Collaboration'],
   },
 ]
 
