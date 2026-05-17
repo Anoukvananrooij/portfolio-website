@@ -2,24 +2,14 @@ import { useState, useEffect } from 'react'
 
 const PROJECTS = [
   {
-    shortTitle: 'Security',
-    title: 'Implementation of Security Technology and Operational Processes for a Multi-Tenant Building',
-    summary: 'Responding to increasing security concerns in a large multi-tenant building by rapidly implementing a broad set of measures — from access control and camera surveillance to process improvements and intensified member communication.',
-    context: 'A large multi-tenant building with 24/7 user access operated with on-site staff coverage limited to office hours. Managing security in a continuously operating building with a large and diverse user base, limited on-site presence and a complex multi-stakeholder environment required a structured and rapid response.',
-    role: 'As location lead, responsible for the full operational management of the building: client satisfaction, team management, facility management, sales, events, HR and financial reporting to management. When security concerns arose, I coordinated the response together with the CEO and external partners — keeping daily operations running and maintaining member trust throughout.',
-    implemented: 'Improvements were rolled out quickly across several areas.\n\nAccess control policies were tightened and the system was switched to wired connections to improve reliability. The access control database was restructured and cleaned, including outdated data from previous migrations. A new key management process was designed and rolled out to the operations team. Mechanical security of doors throughout the building was strengthened. Closing rounds were redesigned and made more rigorous.\n\nOn the monitoring side, the existing camera infrastructure was extended with new software and an external partner was contracted for nightly surveillance.\n\nMember communication was increased and structured — keeping tenants informed of the measures being taken. Collaboration with local law enforcement was intensified in parallel.',
-    result: 'Member trust was restored and maintained throughout the process. The combination of operational measures and collaboration with law enforcement contributed to identifying the individual responsible. Incidents reduced significantly during the implementation period. The processes put in place continued after the project concluded.',
-    topics: ['Access Control', 'Camera Surveillance', 'Process Design', 'Crisis Management'],
-  },
-  {
-    shortTitle: 'Team Rebuilding',
-    title: 'Operational Stabilization and Team Rebuilding During Organizational Change',
-    summary: 'Stepping into location management during a period of organisational change to rebuild operational stability — designing missing processes, reconfiguring software tools and developing a team capable of running the building independently.',
-    context: 'A large multi-tenant coworking building with 24/7 operations and a broad user base was going through a period of significant organisational change. The organisation was mid-way through a migration between two CRM systems — one of which was still being designed — and the on-site teams were new, without sufficient onboarding or the technical background to navigate the tools they were expected to use.',
-    role: 'Brought in as location manager with the explicit goal of rebuilding operational stability and team capacity. Stepping in without a formal handover, I learned each role myself — from the front desk to sales to events — until I understood it well enough to design or rebuild the process around it. I then configured the software tools to reflect how the work actually needed to run, and used that as the basis for onboarding the team. I also handled a significant share of sales and account management directly, alongside the security incidents that ran in parallel.',
-    implemented: 'Where processes did not exist, I designed them. Where the CRM did not reflect how work needed to flow, I reconfigured it. This meant team members were onboarded into a working system rather than a broken one, and could take over and onboard others in turn.\n\nApproximately 12 employees and interns were hired, onboarded and integrated into structured workflows across sales, facility management, helpdesk and client operations. Where automations proved unreliable in practice, workflows were temporarily reverted to manual processes first — so the team understood the underlying logic before automation was reintroduced.',
-    result: 'By the end of the engagement, the team was capable of running the building independently within the new operational structures. Client feedback reflected a meaningful improvement in service levels compared to the period before the reorganisation.',
-    topics: ['Team Leadership', 'Workflow Automation', 'CRM Systems', 'Change Management'],
+    shortTitle: 'Facility Operations',
+    title: 'Operational Turnaround at a Multi-Tenant Facility',
+    summary: 'Taking on full operational management of a large multi-tenant coworking building during a period of organisational change — implementing security measures, rebuilding the team, completing a CRM migration across locations and restoring operational stability.',
+    context: 'A large multi-tenant coworking facility with 24/7 operations had experienced a period of significant organisational instability. Security incidents had increased, the operational team had largely turned over and the organisation was mid-way through a migration between two CRM systems — one of which was still being configured. Managing daily operations while addressing all three challenges simultaneously required prioritisation and a structured approach.',
+    role: 'As location manager, responsible for the full operational management of the building: client satisfaction, team management, facility management, sales, events, HR and financial reporting. I coordinated the security response, led the team rebuild and drove the CRM migration — all running in parallel. During understaffed periods, I also performed many operational tasks directly while continuing to coordinate the broader operation.',
+    implemented: 'On the security side, access control policies were tightened and the system was switched to wired connections to improve reliability. The access control database was restructured and cleaned, including outdated data from previous migrations. A new key management process was designed and rolled out to the operations team. Mechanical security throughout the building was strengthened and closing rounds were redesigned. The existing camera infrastructure was extended with new monitoring software and an external partner was contracted for nightly surveillance. Member communication was increased and structured throughout. Collaboration with local law enforcement was intensified in parallel.\n\nIn parallel, approximately 12 employees and interns were hired, onboarded and integrated into structured workflows across sales, facility management, helpdesk and client operations. Where processes did not exist, they were designed from scratch. Where automations proved unreliable in practice, workflows were temporarily reverted to manual processes first — so team members understood the underlying logic before automation was reintroduced.\n\nThe CRM migration covered multiple locations. The new system was configured to reflect how work actually needed to flow, rather than a generic out-of-the-box setup. Operational pipelines were built to guide team members step by step through sales follow-ups, administrative actions, handovers and task management — giving teams a system they could operate and maintain independently.',
+    result: 'Member trust was restored and security incidents reduced significantly. The combination of operational measures and collaboration with law enforcement contributed to identifying the individual responsible for the incidents. The operational team became capable of running the building independently within the new structures. The CRM migration was completed across locations, and client feedback reflected a meaningful improvement in service levels compared to the period before the reorganisation.',
+    topics: ['Operations Management', 'Security Implementation', 'Team Building', 'CRM Migration', 'Change Management'],
   },
   {
     shortTitle: 'Robotics R&D',
@@ -34,7 +24,7 @@ const PROJECTS = [
   {
     shortTitle: 'Access Control',
     title: 'Troubleshooting and Stabilization of a Wireless Access Control System',
-    summary: 'Troubleshooting and stabilising a cloud-based wireless access control system serving approximately 700 users in a building with round-the-clock operations.',
+    summary: 'Troubleshooting and stabilising a cloud-based wireless access control system serving several hundred users in a building with round-the-clock operations.',
     context: 'The system was experiencing persistent reliability issues affecting daily access for users and staff. The failures required a structural solution rather than repeated workarounds.',
     role: 'Led the troubleshooting process and coordinated the infrastructure change. Subsequently trained the on-site team to manage and operate the system independently.',
     implemented: 'Systematic troubleshooting identified the root cause as a networking problem at the gateway level. The system was switched from wireless to wired connections and the infrastructure was reconfigured. The on-site team was then trained on day-to-day system management.',
@@ -55,10 +45,10 @@ const PROJECTS = [
     shortTitle: 'Ecosystem Building',
     title: 'Building a Regional Public-Private Ecosystem',
     summary: 'Developing a public-private ecosystem around a shared regional innovation agenda, aligning approximately 60 private organisations with public partners around a common roadmap.',
-    context: 'In collaboration with regional public institutions, a structured effort was set up to build an innovation ecosystem in the Utrecht region, aligning public and private parties around a shared agenda.',
+    context: 'In collaboration with regional public institutions, a structured effort was set up to build an innovation ecosystem across a region in the Netherlands, aligning public and private parties around a shared agenda.',
     role: 'Led the stakeholder development process — identifying, interviewing and recruiting private organisations, aligning them with the public partners involved, securing funding and organising the regional launch event.',
     implemented: 'Approximately 60 private organisations were approached, interviewed and recruited into the ecosystem. A shared roadmap was developed and agreed upon across public and private parties. Funding was secured and a regional kickoff event was organised.',
-    result: 'A functioning public-private ecosystem was established across the Utrecht region. The kickoff event, attended by the majority of participating organisations, marked the transition from planning to active collaboration.',
+    result: 'A functioning public-private ecosystem was established across the region. The kickoff event, attended by the majority of participating organisations, marked the transition from planning to active collaboration.',
     topics: ['Ecosystem Building', 'Stakeholder Engagement', 'Public-Private Collaboration'],
   },
 ]
@@ -81,7 +71,7 @@ export default function Projects() {
         <div>
           <h2>Selected work.</h2>
           <p className="section-intro">
-            Case studies in operational leadership and technology implementation.
+            Case studies in operational leadership and technology implementation. Details have been adjusted to protect confidentiality.
           </p>
         </div>
       </div>
