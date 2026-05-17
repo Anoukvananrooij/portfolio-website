@@ -25,7 +25,15 @@ export default function Header() {
     )
 
     sections.forEach(s => observer.observe(s))
-    return () => observer.disconnect()
+
+    const onScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
+        setActive('contact')
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    return () => { observer.disconnect(); window.removeEventListener('scroll', onScroll) }
   }, [])
 
   return (
