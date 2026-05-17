@@ -34,12 +34,12 @@ const PROJECTS = [
   {
     shortTitle: 'AI Camera Pilot',
     title: 'AI Camera Analytics Pilot',
-    summary: 'Coordinating a pilot using AI camera technology to turn real-time people detection data into operational insights for facility and planning decisions.',
-    context: 'A pilot was initiated to assess whether AI camera technology could be used to detect and count people in an outdoor environment and translate that data into something actionable for operations.',
-    role: 'Coordinated the pilot end to end — from setting up the camera infrastructure to overseeing development of a dashboard to make the data usable for operational teams.',
-    implemented: 'Camera infrastructure was set up in the outdoor environment. A software dashboard was developed to process real-time detection data and present it in a format relevant to facility management and planning.',
-    result: 'The pilot delivered a working proof of concept, with live camera data made actionable through the dashboard.',
-    topics: ['AI Cameras', 'Dashboard', 'Pilot Management'],
+    summary: 'Joining an AI camera pilot as the interface between the client and our development team — gathering requirements through end user interviews, configuring the software platform and ensuring the dashboard reflected how operational teams actually worked.',
+    context: 'A pilot was underway using AI camera technology to detect and count people in an outdoor environment, with the goal of turning that data into actionable insights for facility management and planning. The camera infrastructure was already in place and a developer was handling the technical build. My role was to bridge the operational and technical sides of the project.',
+    role: 'I worked closely with the client\'s project manager to understand their requirements and expectations, and translated these into clear direction for our developer. To do this well, I invested significant time in understanding the client\'s processes from the ground up — holding structured interviews with end users across different functions to map how they worked, what they needed and where the data would add value. I also ensured the client\'s administrative data was complete and up to date, since accurate configuration depended on it.',
+    implemented: 'Based on the end user interviews and a solid understanding of both the client\'s processes and our software architecture, I configured the software frontend — deciding what data to surface, how to structure the interface and how to present information in a way that matched the actual workflows of the teams using it. Throughout the project, I maintained the communication line between the client\'s project manager and our developer, ensuring that feedback was captured, translated accurately and acted on.',
+    result: 'The pilot delivered a working proof of concept — live camera data made accessible and actionable through a configured dashboard that reflected how the client\'s operational teams actually worked.',
+    topics: ['Requirements Gathering', 'Software Configuration', 'Stakeholder Communication', 'AI Cameras'],
   },
   {
     shortTitle: 'Ecosystem Building',
