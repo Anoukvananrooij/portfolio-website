@@ -147,9 +147,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 680;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
 }
 
 /* Hero */
@@ -204,7 +204,7 @@ h3 {
 /* About */
 .about-body {
   max-width: 780px;
-  font-size: 1.08rem;
+  font-size: 1rem;
   color: var(--text);
   margin-top: 20px;
 }
@@ -320,56 +320,101 @@ details[open] .toggle-icon { transform: rotate(45deg); }
 .tab-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 20px;
 }
 
 .tab-btn {
-  padding: 8px 18px;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease, box-shadow 180ms ease;
   white-space: nowrap;
+  min-height: 48px;
 }
 
 .tab-btn:hover {
   border-color: var(--accent);
   color: var(--text);
+  box-shadow: 0 2px 8px rgba(26, 37, 48, 0.08);
 }
 
 .tab-btn.active {
   background: var(--accent-dark);
   border-color: var(--accent-dark);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(42, 68, 96, 0.25);
 }
+
+.tab-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.55;
+  letter-spacing: 0.04em;
+}
+
+.tab-btn.active .tab-num { opacity: 0.7; }
 
 .tab-panel {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 36px;
 }
 
 .tab-panel h3 {
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
 }
 
-/* Experience list */
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 20px 0 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.expand-btn:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.expand-btn.collapse {
+  margin-top: 24px;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.expand-btn.collapse:hover {
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+/* Experience listed cards */
 .experience-list {
-  border-top: 1px solid var(--border);
-}
-
-.experience-item {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .experience-item-header {
@@ -381,7 +426,7 @@ details[open] .toggle-icon { transform: rotate(45deg); }
 }
 
 .experience-name {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 650;
   color: var(--text);
 }
@@ -394,9 +439,9 @@ details[open] .toggle-icon { transform: rotate(45deg); }
 
 .experience-note {
   color: var(--muted);
-  font-size: 0.85rem;
-  margin: 6px 0 0;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  margin: 8px 0 0;
+  line-height: 1.55;
 }
 
 /* Education */

@@ -25,10 +25,6 @@ export default function About() {
               I am motivated by complexity, by pressure and by building structure where it
               does not yet exist.
             </p>
-            <p>
-              During university I won three national entrepreneurship competitions.
-              I work independently and take genuine ownership of the challenges I take on.
-            </p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const EMPLOYERS = [
     name: 'Microlab',
     role: 'Location Manager',
     years: '2025 – 2026',
-    note: 'Multi-tenant coworking & real estate. Led security technology implementation, team management, tenant relations, sales and facility operations across a 1,500-user building.',
+    note: 'Multi-tenant coworking & facility operations. Led security technology implementation, team management, tenant relations, sales and facility operations across a 1,500-user building.',
   },
   {
     name: 'Microtuin',
@@ -58,7 +58,7 @@ export default function Experience() {
 
       <div className="experience-list reveal">
         {EMPLOYERS.map(({ name, role, years, note }) => (
-          <div key={name} className="experience-item">
+          <div key={name} className="experience-card">
             <div className="experience-item-header">
               <span className="experience-name">{name}</span>
               <span className="experience-meta">{role} · {years}</span>

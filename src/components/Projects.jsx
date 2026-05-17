@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const PROJECTS = [
   {
@@ -17,7 +17,7 @@ const PROJECTS = [
     summary: 'Rebuilding operational teams and restoring stability at a multi-tenant coworking location during a period of significant organisational change and high employee turnover.',
     context: 'A multi-tenant coworking and real estate operation was going through a period of significant organisational instability. Frequent management changes, uncertainty about the future of the organisation and the introduction of new software systems had resulted in high employee turnover and declining operational quality. At the time of joining, several team members had already resigned, while operational continuity and customer satisfaction were under pressure.',
     role: 'As location manager, responsible for the operational performance of the building and teams across sales, facility management, helpdesk, events, administration and account management. This included recruitment, onboarding, operational coordination, process implementation and day-to-day team management. During understaffed periods, many operational tasks were performed directly while coordination of the broader operation continued.',
-    implemented: 'Over time, approximately 12 employees and interns were recruited, onboarded and integrated into newly structured operational workflows. Processes were redesigned and standardised across sales, facility management, helpdesk and customer operations.\n\nBecause many existing automations proved unreliable in practice, several workflows were temporarily reverted to manual processes first. This allowed team members to understand the operational logic fully before automation was gradually reintroduced.\n\nWithin the CRM environment (HubSpot), operational software pipelines were designed to guide employees step-by-step through their daily work. While marketing lead funnels were developed with external partners, the underlying operational logic — including sales follow-ups, administrative actions, task handovers and workflow structures — was designed and built directly in the system. Examples included automated lead qualification and scheduling flows where leads could submit requirements online and directly book meetings with the sales team.',
+    implemented: 'Over time, approximately 12 employees and interns were recruited, onboarded and integrated into newly structured operational workflows. Processes were redesigned and standardised across sales, facility management, helpdesk and customer operations.\n\nBecause many existing automations proved unreliable in practice, several workflows were temporarily reverted to manual processes first. This allowed team members to understand the operational logic fully before automation was gradually reintroduced.\n\nWithin the CRM environment (HubSpot), operational software pipelines were designed to guide employees step-by-step through their daily work. While marketing lead funnels were developed with external partners, the underlying operational logic — including sales follow-ups, administrative actions, task handovers and workflow structures — was designed and built directly in the system.',
     result: 'The operational organisation became stable and autonomous again. Customer feedback indicated that quality, team stability and service levels had improved significantly compared to the period before the organisational changes. By the end of the engagement, teams were capable of running the building independently within the new operational structures.',
     topics: ['Team Leadership', 'Workflow Automation', 'CRM Systems', 'Change Management'],
   },
@@ -57,7 +57,10 @@ function renderBody(text) {
 
 export default function Projects() {
   const [active, setActive] = useState(0)
+  const [expanded, setExpanded] = useState(false)
   const project = PROJECTS[active]
+
+  useEffect(() => { setExpanded(false) }, [active])
 
   return (
     <section id="projects">
@@ -81,6 +84,7 @@ export default function Projects() {
               className={`tab-btn${active === i ? ' active' : ''}`}
               onClick={() => setActive(i)}
             >
+              <span className="tab-num">0{i + 1}</span>
               {p.shortTitle}
             </button>
           ))}
@@ -89,7 +93,14 @@ export default function Projects() {
         <div className="tab-panel" role="tabpanel">
           <h3>{project.title}</h3>
           <p className="project-blurb">{project.summary}</p>
-          {project.context && (
+
+          {project.context && !expanded && (
+            <button className="expand-btn" onClick={() => setExpanded(true)}>
+              Read full case →
+            </button>
+          )}
+
+          {project.context && expanded && (
             <div className="project-body">
               <h4>Context</h4>
               {renderBody(project.context)}
@@ -99,8 +110,12 @@ export default function Projects() {
               {renderBody(project.implemented)}
               <h4>Result</h4>
               {renderBody(project.result)}
+              <button className="expand-btn collapse" onClick={() => setExpanded(false)}>
+                ↑ Collapse
+              </button>
             </div>
           )}
+
           <div className="topics">
             {project.topics.map(t => <span key={t} className="topic">{t}</span>)}
           </div>
